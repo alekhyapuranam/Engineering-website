@@ -1,10 +1,25 @@
-import { Link } from "react-router-dom"
-import { ProjectsCards } from "./projectcards"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ProjectsCards } from "./projectcards";
 export function HomeComponent() {
+    const [index,setIndex]=useState(0);
+    function next(){
+        if(index<(4-3)){
+            setIndex(index+3);
+
+        }
+
+    }
+    function prev(){
+        if(index>0){
+            setIndex(index-3);
+        }
+
+    }
 
     return (
         <>
-            <header >
+         <header >
                 <div className="relative">
                
                     <img src="/heroimage1.jpg" className="w-full opacity-95 object-cover h-[500px]" />
@@ -26,6 +41,8 @@ export function HomeComponent() {
                 </div>
                 </div>
             </header>
+        <div className="  max-w-6xl m-auto px-4">
+            
           
                 <div className="Aboutme-section flex items-center flex-col gap-5 mt-10">
                     <div className="text-2xl font-bold text-zinc">About Me</div>
@@ -52,7 +69,17 @@ export function HomeComponent() {
                     <div className="flex justify-center">
                         <img src="/arrow-image.png" alt="" className="size-8 my-0" />
                     </div>
-                    <div className="flex gap-5"><ProjectsCards /></div>
+                    <div className="overflow-hidden relative"> 
+                        <button onClick={prev} className={`absolute top-1/2 left-0 -translate-y-1/2 z-10 bg-darkpink text-white rounded-full  px-3 py-2 ${index === 0 ? 'opacity-50 cursor-not-allowed' : 'opacity-100'}`}>{"<"}</button>
+                        <button onClick={next} className={`absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-darkpink text-white rounded-full px-3 py-2 ${index >= 1 ? 'opacity-50 cursor-not-allowed' : 'opacity-100'}`}>{">"}</button>
+
+
+                          <div className={`flex  items-center justify-content transition-transform duration-500 ease-in-out  gap-5`}
+                          style={{transform: `translateX(-${index * 33.333}%)`}}>
+                            <ProjectsCards />
+                            </div>
+                    </div>
+                  
 
                 </div>
 
@@ -74,6 +101,9 @@ export function HomeComponent() {
                     <div>+64 0225030383</div>
                 </div>
             </footer>
+
+        </div>
+           
         </>
     )
 }
