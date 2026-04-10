@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ContactUs } from "./Contactus";
 import { ProjectsCards } from "./projectcards";
 export function HomeComponent() {
@@ -27,10 +26,10 @@ export function HomeComponent() {
                
                 <ul className="flex justify-end gap-7 absolute top-0 right-0 text-white mr-5px">
 
-             <li> <Link to="/About">About me</Link></li>  
-               <li> <Link to="/Skills">Skills</Link></li>
-               <li> <Link to="/Projects">Projects</Link></li>
-               <li className="pr-4"> <Link to="/Contactus">Contactus</Link></li>
+             <li> <a href="#Aboutme" className="text-white ">About me</a></li>
+               <li> <a href="#Skills" className="text-white ">Skills</a></li>
+               <li> <a href="#Projects" className="text-white ">Projects</a></li>
+               <li className="pr-4"> <a href="#contacts" className="text-white ">Contactus</a></li>
                 </ul>
                 <div className="absolute text-[50px] text-white font-normal italic top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
                     <span >Hi there! My name is Alekhya and I'm a</span>
@@ -45,14 +44,14 @@ export function HomeComponent() {
         <div className="  max-w-6xl m-auto px-4">
             
           
-                <div className="Aboutme-section flex items-center flex-col gap-5 mt-10">
+                <div id="Aboutme" className="Aboutme-section flex items-center flex-col gap-5 mt-10">
                     <div className="text-2xl font-bold text-zinc">About Me</div>
                     <div><img src="/arrow-image.png" alt="" className="size-8 my-0" /></div>
                     <div className="max-w-3xl text-center m-auto px-5">
                         <p>I am a motivated and detail-oriented Frontend Developer with a growing foundation in modern web technologies such as React, TypeScript, JavaScript, and Tailwind CSS. I enjoy building responsive and visually appealing user interfaces while continuously learning best practices in web development. I am currently focused on improving my technical skills through hands-on projects and practical experience. </p>
                     </div>
                 </div>
-                <div className="skills-section flex items-center flex-col mt-10 gap-5">
+                <div id="Skills" className="skills-section flex items-center flex-col mt-10 gap-5">
                     <div className="text-2xl font-bold text-zinc">My Skills</div>
                     <div><img src="/arrow-image.png" alt="" className="size-8 my-0" /></div>
                     <div className="flex m-w-3xl gap-5 flex-wrap justify-center">
@@ -65,7 +64,7 @@ export function HomeComponent() {
                     </div>
 
                 </div>
-                <div className="projects-section flex items-center flex-col mt-10 gap-5">
+                <div id="Projects" className="projects-section flex items-center flex-col mt-10 gap-5">
                     <div className="text-2xl font-bold text-zinc text-center">My Projects</div>
                     <div className="flex justify-center">
                         <img src="/arrow-image.png" alt="" className="size-8 my-0" />
@@ -83,7 +82,7 @@ export function HomeComponent() {
                   
 
                 </div>
-                <div className="contact-section flex items-center flex-col mt-10 gap-5">
+                <div id="contacts" className="contact-section flex items-center flex-col mt-10 gap-5">
                 <div className="text-2xl font-bold text-zinc">Contacts</div>
                     <div><img src="/arrow-image.png" alt="" className="size-8 my-0" /></div>
                 </div>
