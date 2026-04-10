@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ContactUs } from "./Contactus";
 import { ProjectsCards } from "./projectcards";
 export function HomeComponent() {
     const [index,setIndex]=useState(0);
@@ -19,7 +20,7 @@ export function HomeComponent() {
 
     return (
         <>
-         <header >
+         <header id="top" >
                 <div className="relative">
                
                     <img src="/heroimage1.jpg" className="w-full opacity-95 object-cover h-[500px]" />
@@ -87,25 +88,16 @@ export function HomeComponent() {
                     <div><img src="/arrow-image.png" alt="" className="size-8 my-0" /></div>
                 </div>
                 <div className="flex justify-center gap-50 pt-6">
-                     <div>
-                        <div>LinkedIn</div>
-                        <div>www.linkedin.com/in/alekhya-puranam</div>
-                    </div>
-                <div>
-                    <div>Email</div>
-                    <div>alekhyapuranam99@gmail.com</div>
-
-                </div>
-                <div>
-                    <div>Phone Number</div>
-                    <div>+64 0225030383</div>
-                </div>
+                    <ContactUs />
                 </div>
 
-            
+           
            
 
         </div>
+         <footer className="text-center mt-15  bg-darkpink  text-white ">© 2024 Alekhya Puranam. All rights reserved.
+                <a href="#top"  className="underline cursor-pointer ml-10">Back to Top</a>
+            </footer>
            
         </>
     )

@@ -9,3 +9,6 @@
     --color-lightpink: #fce7f3;
     --color-arrowpink: #db2777;
 }
+html{
+    scroll-behavior: smooth;
+}
