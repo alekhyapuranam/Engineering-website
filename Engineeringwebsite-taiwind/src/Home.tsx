@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ContactUs } from "./Contactus";
+import { HeaderComponent } from "./header";
 import { ProjectsCards } from "./projectcards";
 export function HomeComponent() {
     const [index,setIndex]=useState(0);
@@ -19,39 +20,20 @@ export function HomeComponent() {
 
     return (
         <>
-         <header id="top" >
-                <div className="relative">
-               
-                    <img src="/heroimage1.jpg" className="w-full opacity-95 object-cover h-[500px]" />
-               
-                <ul className="flex justify-end gap-7 absolute top-0 right-0 text-white mr-5px">
+         <HeaderComponent />
+           
 
-             <li> <a href="#Aboutme" className="text-white ">About me</a></li>
-               <li> <a href="#Skills" className="text-white ">Skills</a></li>
-               <li> <a href="#Projects" className="text-white ">Projects</a></li>
-               <li className="pr-4"> <a href="#contacts" className="text-white ">Contactus</a></li>
-                </ul>
-                <div className="absolute text-[50px] text-white font-normal italic top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
-                    <span >Hi there! My name is Alekhya and I'm a</span>
-                    <span className="text-darkpink font-semibold"> front-end Developer</span>
-                    <div className="ml-50 mt-7" >
-                        <button className="bg-darkpink rounded-full px-4 py-3 text-[30px] ">Download CV   </button>
-                    </div>
-                    
-                </div>
-                </div>
-            </header>
         <div className="  max-w-6xl m-auto px-4">
             
           
-                <div id="Aboutme" className="Aboutme-section flex items-center flex-col gap-5 mt-10">
+                <div id="Aboutme" className="Aboutme-section flex items-center flex-col gap-5 mt-10 ">
                     <div className="text-2xl font-bold text-zinc">About Me</div>
                     <div><img src="/arrow-image.png" alt="" className="size-8 my-0" /></div>
                     <div className="max-w-3xl text-center m-auto px-5">
                         <p>I am a motivated and detail-oriented Frontend Developer with a growing foundation in modern web technologies such as React, TypeScript, JavaScript, and Tailwind CSS. I enjoy building responsive and visually appealing user interfaces while continuously learning best practices in web development. I am currently focused on improving my technical skills through hands-on projects and practical experience. </p>
                     </div>
                 </div>
-                <div id="Skills" className="skills-section flex items-center flex-col mt-10 gap-5">
+                <div id="Skills" className="skills-section flex items-center flex-col  mt-10 gap-5">
                     <div className="text-2xl font-bold text-zinc">My Skills</div>
                     <div><img src="/arrow-image.png" alt="" className="size-8 my-0" /></div>
                     <div className="flex m-w-3xl gap-5 flex-wrap justify-center">
